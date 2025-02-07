@@ -32,4 +32,5 @@ ul {
 
 .navigation__menue {
   display: flex;
+  justify-content: space-between;
 }
