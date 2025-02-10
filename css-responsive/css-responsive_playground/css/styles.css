@@ -94,6 +94,14 @@ h1 {
   height: 250px;
 }
 
+@media (orientation: landscape) {
+  .box--three {
+    background-color: lightpink;
+  
+    width: 250px;
+    height: 50px;
+}
+
 .box--four {
   background-color: lightgray;
 
