@@ -1,3 +1,13 @@
+:root {
+  --header-background: #8336ff73;
+  --a_focus-visible-background-color: #8336ff73;
+  --strong-color: #ff4a11;
+  --figure-background-color: #ff4a11;
+  --a-background-color: #ff4a11;
+  --h1-color: #ffffff;
+  --figcaption-color: #ffffff;
+  --a-color: #ffffff;
+}
 *,
 *::before,
 *::after {
@@ -11,13 +21,12 @@ body {
 }
 
 header {
-  background: rgb(131 54 255/ 45%);
-  
+  background: var(--header-background);
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: var(--h1-color);
   line-height: 1.4;
   margin: 0;
   letter-spacing: 0.025em;
@@ -30,7 +39,7 @@ h2 {
 }
 
 strong {
-  color: #ff4a11;
+  color: var(--strong-color);
 }
 
 section {
@@ -58,12 +67,12 @@ figure {
   gap: 10px;
   margin: 0;
   padding: 10px;
-  background-color: #ff4a11ff;
+  background-color: var(--figure-background-color);
   border-radius: 4px;
 }
 
 figcaption {
-  color: rgb(255 255 255);
+  color: var(--figcaption-color);
 }
 
 nav {
@@ -77,8 +86,8 @@ a {
   font-size: smaller;
   padding: 8px;
   border-radius: 4px;
-  background-color: hsl(14 100% 53%);
-  color: #fff;
+  background-color: var(--a-background-color);
+  color: var(--a-color);
 }
 
 a:hover,
