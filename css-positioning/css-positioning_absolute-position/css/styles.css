@@ -46,7 +46,7 @@ main {
   background-color: #85c1e9;
   position: absolute;
   top: 0px;
-  left: 210px;
+  align-self: center;
 }
 
 .box--top-right {
