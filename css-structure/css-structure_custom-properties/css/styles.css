@@ -1,0 +1,109 @@
+:root {
+  --header-background: #8336ff73;
+  --a_focus-visible-background-color: #8336ff73;
+  --strong-color: #ff4a11;
+  --figure-background-color: #ff4a11;
+  --a-background-color: #ff4a11;
+  --h1-color: #ffffff;
+  --figcaption-color: #ffffff;
+  --a-color: #ffffff;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  line-height: 1.2;
+}
+
+header {
+  background: var(--header-background);
+}
+
+h1 {
+  text-align: center;
+  color: var(--h1-color);
+  line-height: 1.4;
+  margin: 0;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  padding-block: 16px;
+}
+
+h2 {
+  letter-spacing: 0.025em;
+}
+
+strong {
+  color: var(--strong-color);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 16px;
+  width: min(1000px, 100%);
+  margin: 0 auto;
+}
+
+article {
+  flex: 1 200px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+figure {
+  width: min(100%, 400px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 10px;
+  background-color: var(--figure-background-color);
+  border-radius: 4px;
+}
+
+figcaption {
+  color: var(--figcaption-color);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+a {
+  display: inline-block;
+  font-size: smaller;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: var(--a-background-color);
+  color: var(--a-color);
+}
+
+a:hover,
+a:focus-visible {
+  background-color: #8336ff7b;
+  text-decoration: none;
+}
+
+mark {
+  background-color: rgb(255 74 17);
+  color: #ffffff;
+  border-radius: 4px;
+  letter-spacing: 0.025em;
+}
+
+::selection {
+  background-color: #252629;
+  color: #ff4a11;
+}
