@@ -12,9 +12,9 @@ console.clear();
 // --v-- write your code here --v--
 const postTitle = "Title";
 const postText = "Text";
-const postLikes = 17;
+let postLikes = 17;
 const postCreator = "Author";
-const isReported = true
+const isReported = true;
 
 // --^-- write your code here --^--
 
@@ -23,6 +23,13 @@ const isReported = true
 */
 
 // --v-- write your code here --v--
-console.log("Title:" postTitle);
+console.log("Title: " + postTitle);
+console.log("Text: " + postText);
+console.log("Likes: " + postLikes);
+console.log("Creator: " + postCreator);
+console.log("Reported: " + isReported);
+
+postLikes += 1;
+console.log("Likes: " + postLikes);
 
 // --^-- write your code here --^--
