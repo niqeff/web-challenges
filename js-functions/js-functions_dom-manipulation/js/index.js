@@ -11,9 +11,7 @@ We want to add functionality to the buttons on this page. When a button is click
   3. Use the two functions in the event listeners for the buttons to apply the corresponding color to the box when a button is clicked.
 */
 function removeAllColors(elemId) {
-  const elemClasses = elemId.className;
-  console.log("Klassen von Element " + elemId + " -> " + elemClasses);
-  elemId.classList.remove("gray");
+  elemId.className = "box";
 }
 
 function addColor(elemId, color) {
@@ -27,7 +25,7 @@ redButton.addEventListener("click", () => {
 
 blueButton.addEventListener("click", () => {
   removeAllColors(box);
-  addColor(box, "lightblue");
+  addColor(box, "blue");
 });
 
 greenButton.addEventListener("click", () => {
