@@ -6,6 +6,11 @@ const copyButton = document.querySelector("[data-js=copy-button]");
 
 // --v-- Write your code here --v--
 
+copyButton.addEventListener("click", () => {
+  console.log(firstCopyInput.value);
+  secondCopyInput.textContent = firstCopyInput.value;
+});
+
 // --^-- End of Task 1 --^--
 
 // Task 2: Copy and Uppercase
