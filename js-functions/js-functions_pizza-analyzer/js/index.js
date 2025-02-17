@@ -37,11 +37,18 @@ function evalInput() {
 // Task 2: Define the function `updatePizzaDisplay` here
 
 function updatePizzaDisplay(pizzaElement, newSize) {
+<<<<<<< HEAD
+  // console.log("ElemId -> " + pizzaElement + " -- Val -> " + newSize);
+  const newDisplaySize = (newSize / 24) * 100;
+  // console.log("resulting in new display size: " + newDisplaySizeValue);
+  pizzaElement.style.width = newDisplaySize + "px";
+=======
   console.log("ElemId -> " + pizzaElement + " -- Val -> " + newSize);
   const newDisplaySize = (newSize / 24) * 100;
   const newDisplaySizeValue = newDisplaySize + "px";
   console.log("resulting in new display size: " + newDisplaySizeValue);
   pizzaElement.style.width = newDisplaySizeValue;
+>>>>>>> 52ed5aa32a13e0f0bec45b4003ee5d738690da6f
 }
 
 // Task 3: Define the function `updateOutputColor` here

@@ -11,20 +11,18 @@
   </head>
   <body>
     <h1 class="title">Understanding A11y in Forms</h1>
-    <p id="description">
+    <p id="description" aria-label="Description for upcoming form">
       Please let us know how we can support you with a11y issues.
     </p>
 
     <form for="title" aria-labelledby="title">
       <fieldset>
-        <legend aria-label="Description for next 5 interactive elements">
-          Enter your information
-        </legend>
-        <label>Name:</label>
+        <legend aria-describedby="description">Enter your information</legend>
+        <label for="name-Input">Name:</label>
         <input id="name-Input" type="text" />
-        <label>Age:</label>
+        <label for="age-Input">Age:</label>
         <input id="age-Input" type="text" />
-        <label>Color you cannot see:</label>
+        <label for="color-Input">Color you cannot see:</label>
         <input id="color-Input" type="color" />
         <textarea rows="7" placeholder="Leave us a message..."></textarea>
         <button type="submit">Submit</button>
