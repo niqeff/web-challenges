@@ -24,6 +24,7 @@ export const colorToGuess = {
 };
 
 export function setColorToGuess(hexCode, name) {
+  console.log(hexCode, name);
   colorToGuess.hexCode = hexCode;
   colorToGuess.name = name;
 

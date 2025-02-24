@@ -18,6 +18,15 @@ export async function fetchNewColor() {
    */
 
   // --v-- your code here --v--
+  const colorApiResponse = await fetch(colorApiUrl);
+  const guessColorData = await colorApiResponse.json();
+
+  // console.log(guessColorData);
+
+  setColorToGuess(
+    guessColorData.name.closest_named_hex,
+    guessColorData.name.value
+  );
 
   // --^-- your code here --^--
 }
