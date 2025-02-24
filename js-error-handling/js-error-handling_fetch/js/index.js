@@ -13,7 +13,7 @@ async function fetchUserData(url) {
     }
     console.log(response.headers.get("content-type"));
 
-    if (!response.headers.get("content-type") == "application/json") {
+    if (response.headers.get("content-type") !== "application/json") {
       console.log("Hier isser!");
       throw new Error(4711);
     }
@@ -40,16 +40,17 @@ endpoints.forEach((endpoint) => {
     const result = await fetchUserData(endpoint.url);
 
     if (result.error) {
-      console.log(result.error);
-      errorElement.textContent = result.error;
-      if (result.error == 404) {
-        userElement.innerHTML = `Status ${result.error}: No user data available.`;
-      } else if (result.error == 4711) {
-        userElement.innerHTML = `There seems to be an error in the API. The type of returned data is abnormal!`;
-      } else {
-        userElement.innerHTML =
-          "Something else went wrong. But I do not know exactly what";
-      }
+      handleError(result);
+      // console.log(result.error);
+      // errorElement.textContent = result.error;
+      // if (result.error == 404) {
+      //   userElement.innerHTML = `Status ${result.error}: No user data available.`;
+      // } else if (result.error == 4711) {
+      //   userElement.innerHTML = `There seems to be an error in the API. The type of returned data is abnormal!`;
+      // } else {
+      //   userElement.innerHTML =
+      //     "Something else went wrong. But I do not know exactly what";
+      // }
     } else {
       const user = result.data;
       userElement.innerHTML = `
@@ -60,3 +61,16 @@ endpoints.forEach((endpoint) => {
     }
   });
 });
+
+function handleError(error) {
+  console.log(error.error);
+  errorElement.textContent = error.error;
+  if (error.error == 404) {
+    userElement.innerHTML = `Status ${error.error}: No user data available.`;
+  } else if (error.error == 4711) {
+    userElement.innerHTML = `There seems to be an error in the API. The type of returned data is abnormal!`;
+  } else {
+    userElement.innerHTML =
+      "Something else went wrong. But I do not know exactly what";
+  }
+}
