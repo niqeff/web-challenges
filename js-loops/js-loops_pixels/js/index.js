@@ -128,7 +128,7 @@ for (pixelData of pixelValues) {
   for (colorData of pixelData) {
     const divElem = document.createElement("div");
     divElem.classList.add("pixel");
-    divElem.style.backgroundColor("colorData");
+    divElem.style.backgroundColor = colorData;
     canvas.append(divElem);
   }
 }
