@@ -1,3 +1,11 @@
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <RenderSum valueA={11} valueB={33} />;
+}
+
+function RenderSum({ valueA, valueB }) {
+  return (
+    <div>
+      Calculated: {valueA} + {valueB} = {valueA + valueB}
+    </div>
+  );
 }
