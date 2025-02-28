@@ -17,6 +17,7 @@ Use array destructuring to extract the variables `firstNameOfChris`, `lastNameOf
 */
 
 const personChris = [12, "Chris", "Owen"];
+export const [ageOfChris, firstNameOfChris, lastNameOfChris] = personChris;
 
 /*
 EXERCISE 3
@@ -25,6 +26,7 @@ Ensure no unused variables remain.
 */
 
 const personAlex = ["Alex", 12, "Main"];
+export const [firstNameOfAlex, , lastNameOfAlex] = personAlex;
 
 /*
 EXERCISE 4
@@ -33,6 +35,7 @@ as variable called `lastName`.
 */
 
 const students = ["Christina", "Jon", "Alexandare"];
+export const [, , lastName] = students;
 
 /*
 EXERCISE 5
