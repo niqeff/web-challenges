@@ -20,6 +20,12 @@ export default function StatusCheck() {
      * is okay and false if it is not.
      **/
     // --v-- write your code here --v--
+    const response = fetch(apiStatusUrl);
+    if (response.ok) {
+      return "✅";
+    } else {
+      return "❌";
+    }
     // --^-- write your code here --^--
   }
 
