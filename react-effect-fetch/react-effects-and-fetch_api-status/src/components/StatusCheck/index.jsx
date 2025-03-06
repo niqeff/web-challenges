@@ -1,12 +1,13 @@
+import { useState } from "react";
 import "./StatusCheck.css";
 
 const apiStatusUrl = "https://example-apis.vercel.app/api/status";
 
 export default function StatusCheck() {
-  const statusIcon = "⁉️";
+  const [statusIcon, setStatusIcon] = useState("⁉️");
   // Something needs to change here…
   // ↙️
-  function handleCheckApiStatus() {
+  async function handleCheckApiStatus() {
     /**
      * Hint 1:
      * Use the `fetch()` function to send a request to `apiStatusUrl`.
@@ -20,6 +21,14 @@ export default function StatusCheck() {
      * is okay and false if it is not.
      **/
     // --v-- write your code here --v--
+    try {
+      setStatusIcon("⏳");
+      const response = await fetch(apiStatusUrl);
+      const updateIcon = response.ok ? "✅" : "❌";
+      setStatusIcon(updateIcon);
+    } catch {
+      setStatusIcon("🚨");
+    }
     // --^-- write your code here --^--
   }
 
