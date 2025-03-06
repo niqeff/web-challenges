@@ -4,10 +4,10 @@ import Entry from "../Entry";
 import Tabs from "../Tabs";
 import Tab from "../Tab";
 import Badge from "../Badge";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 
-export default function EntriesSection(entries) {
-  console.log(entries);
+export default function EntriesSection({ entries }) {
+  console.log("Entries in Section ->  " + entries);
   return (
     <section className="entries-section">
       <Tabs>
