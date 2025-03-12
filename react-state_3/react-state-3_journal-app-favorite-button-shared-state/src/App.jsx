@@ -53,12 +53,28 @@ function App() {
     ]);
   }
 
+  function handleToggleFavorite(id) {
+    const newEntries = entries.map((entry) => {
+      if (entry.id === id) {
+        entry.isFavorite = !entry.isFavorite;
+      }
+      console.log(entry);
+      return entry;
+    });
+    console.log(newEntries);
+    setEntries([...newEntries]);
+    // console.log(entries);
+  }
+
   return (
     <div className="app">
       <Header />
       <main className="app__main">
         <EntryForm onAddEntry={handleAddEntry} />
-        <EntriesSection entries={entries} />
+        <EntriesSection
+          entries={entries}
+          onToggleFavorite={handleToggleFavorite}
+        />
       </main>
       <Footer />
     </div>
