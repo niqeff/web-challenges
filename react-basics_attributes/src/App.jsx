@@ -1,7 +1,7 @@
 import "./styles.css";
 
 export default function App() {
-  return <>{CreateArticle()}</>;
+  return <CreateArticle />;
 }
 
 function CreateArticle() {
@@ -13,7 +13,9 @@ function CreateArticle() {
       <a
         className="article__link"
         href="https://de.wikipedia.org/wiki/Borussia_Dortmund"
-      ></a>
+      >
+        Guck mal!
+      </a>
     </article>
   );
 }

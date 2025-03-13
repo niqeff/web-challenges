@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { volumes } from "../../lib/data.js";
-import { useRouter } from "next/router.js";
+import { volumes } from "../../lib/data";
+import { useRouter } from "next/router";
 
 export default function VolumeDetail() {
   const router = useRouter();
@@ -15,6 +15,8 @@ export default function VolumeDetail() {
   if (!volume) {
     return null;
   }
+
+  console.log(volume);
 
   const { title, description, cover, books } = volume;
 
